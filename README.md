@@ -1,5 +1,7 @@
 # dsh-skin-switcher · 皮肤切换插件
 
+**中文** · [English](README.en.md)
+
 > 为 DeepSeek Harness（dsh）Web GUI 提供**设置内的皮肤切换器**：自动发现所有已安装皮肤，下拉选择，**悬停即预览**，点击后刷新页面生效。
 
 纯 Cordis 插件，不修改 dsh 源码；与 [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 等 `skin.json` 生态皮肤开箱即用。

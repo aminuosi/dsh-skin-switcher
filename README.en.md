@@ -1,5 +1,7 @@
 # dsh-skin-switcher
 
+[中文](README.md) · **English**
+
 > A skin switcher for the DeepSeek Harness (dsh) Web GUI — a **Settings page** that auto-discovers every installed skin, lets you pick one from a dropdown with **hover previews**, and applies it after a page refresh.
 
 A pure Cordis plugin; no dsh source changes. Works out of the box with `skin.json`-based skins from the [dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) ecosystem.
