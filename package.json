@@ -1,0 +1,53 @@
+{
+  "name": "@dsh-external/dsh-client-ui-skin-switcher",
+  "description": "Settings skin switcher for the dsh web GUI: lists installed skins (bundles shipping skin.json), lets the user pick one, and applies it on the next page refresh through the profile patch layer's live reload",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/client.js.map",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "js-yaml": "^4.1.0",
+    "lightningcss": "^1.32.0",
+    "tsdown": "0.22.14",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,8 @@
+# dsh bundle layer: mount the skin switcher. The host half serves the
+# catalog/select/preview routes under /skin-switcher; the browser half
+# registers the 皮肤 page in Settings. Mutual exclusion between skins is
+# managed by this plugin writing `disabled` rows into the profile's own
+# cordis.patch.yml (the live-reloaded user layer).
+- insert:
+    - id: ui-skin-switcher
+      name: '@dsh-external/dsh-client-ui-skin-switcher'
