@@ -201,7 +201,7 @@ export function SkinsSection(props: SkinsSectionProps): ReactElement {
                           className={styles.previewImage}
                         />
                       )
-                      : <div className={styles.previewFallback} />}
+                      : <NoPreviewFallback name={previewSkin.name} accent={previewSkin.accent} t={t} />}
                     <div className={styles.previewMeta}>
                       <span className={styles.previewName}>{previewSkin.name}</span>
                       {previewSkin.tagline !== undefined && previewSkin.tagline !== ''
@@ -224,6 +224,19 @@ export function SkinsSection(props: SkinsSectionProps): ReactElement {
           <button type="button" className={styles.retry} onClick={() => window.location.reload()}>{t('refresh')}</button>
         </div>
       )}
+    </div>
+  )
+}
+
+/** Accent-tinted placeholder shown when a skin ships no preview image. */
+function NoPreviewFallback({
+  name, accent, t,
+}: { name: string; accent: string | undefined; t: (key: SkinSwitchKey) => string }): ReactElement {
+  const tinted = accent !== undefined && /^#[0-9a-f]{6}$/i.test(accent) ? `${accent}22` : undefined
+  return (
+    <div className={styles.previewFallback} style={tinted !== undefined ? { background: tinted } : undefined}>
+      <span className={styles.previewMonogram}>{name.trim().slice(0, 1) || '✦'}</span>
+      <span className={styles.previewNoImage}>{t('noPreview')}</span>
     </div>
   )
 }

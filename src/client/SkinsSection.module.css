@@ -151,9 +151,25 @@
 }
 
 .previewFallback {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   width: 100%;
   aspect-ratio: 16 / 9;
+  color: var(--dsw-alias-label-tertiary, rgba(128, 128, 128, 0.85));
+  font-size: 12px;
+}
+
+.previewMonogram {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--dsw-alias-label-secondary, rgba(128, 128, 128, 0.7));
+}
+
+.previewNoImage {
+  font-size: 11px;
 }
 
 .previewDefault {
