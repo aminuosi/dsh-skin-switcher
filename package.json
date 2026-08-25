@@ -2,6 +2,17 @@
   "name": "@dsh-external/dsh-client-ui-skin-switcher",
   "description": "Settings skin switcher for the dsh web GUI: lists installed skins (bundles shipping skin.json), lets the user pick one, and applies it on the next page refresh through the profile patch layer's live reload",
   "version": "0.1.0",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "deepseek",
+    "skin",
+    "theme",
+    "switcher",
+    "cordis",
+    "plugin",
+    "web-ui"
+  ],
   "private": true,
   "type": "module",
   "main": "lib/index.js",
